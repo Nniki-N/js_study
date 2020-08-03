@@ -1,26 +1,16 @@
 "use strict";
 
-function showFirstMassage (text) {
-    console.log(text);
-}
-showFirstMassage('Hi');
+const str = 'test';
+const arr = [1, 2, 3];
 
-function calc (a, b) {
-    return (a + b);
-}
-console.log(calc(4, 3));
+console.log(arr.length);
 
-function ret () {
-    let num = 50;
+const logg = 'hello world';
+console.log(logg.slice(-5, -1));
+console.log(logg.substring(6, 11));
 
-    return num;
-}
-const anotheNum = ret();
-console.log(anotheNum);
+const num = 12.6;
+console.log(Math.round(num));
 
-const logger = function () {
-    console.log('hello');
-};
-logger();
-
-const calic = (a, b) => a + b;
+const test = '12.6px';
+console.log(parseFloat(test));
