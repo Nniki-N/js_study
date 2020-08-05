@@ -30,7 +30,7 @@ movieDB.movies.sort();
 movieDB.movies.forEach((film, i) => {
     promoList.innerHTML += `
     <li class="promo__interactive-item">${i + 1}. ${film}
-        <div cl></div>
+        <div class="delete"></div>
     <li/>
     `;
 });

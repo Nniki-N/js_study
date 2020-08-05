@@ -1,34 +1,27 @@
 "use strict";
 
-const box = document.getElementById('box'),
-      btn = document.getElementsByClassName('btn'),
-      btnS = document.querySelectorAll('.btn'),
-      hh = document.querySelector('div'),
-      wrapper = document.querySelector('.wrapper');
+const btn = document.querySelector('button'),
+      overlay = document.querySelector('.overlay');
 
-box.style.cssText = 'height: 100px; width: 100px; background-color: purple;';
+// btn.onclick = function() {
+//     alert('dgjndj');
+// };
 
-// for (let i = 0; i < btn.length; i++) {
-//     btn[i].style.backgroundColor = 'blue';
-// }
+let i = 0;
+const deleteElement = (e) => {
+    console.log(e.target);
+    console.log(e.type);
+    // i++;
+    // if (i == 1) {
+    //     btn.removeEventListener('click', deleteElement);
+    // }
+};
 
-btnS.forEach(item => {
-    item.style.backgroundColor = 'red';
+btn.addEventListener('click', deleteElement);
+overlay.addEventListener('click', deleteElement);
+
+const link = document.querySelector('a');
+link.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(e.target);
 });
-
-const div = document.createElement('div');
-div.classList.add('black');
-
-document.body.append(div);
-// wrapper.before(div);
-// wrapper.after(div);
-
-// div.remove();
-
-wrapper.replaceWith(box);
-
-div.innerHTML = "<h1>Hello world!</h1>";
-
-// div.textContent = "Hello";
-
-div.insertAdjacentHTML('beforebegin', '<h2>hello</h2>');
