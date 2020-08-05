@@ -1,27 +1,13 @@
 "use strict";
 
-const btn = document.querySelector('button'),
-      overlay = document.querySelector('.overlay');
+// console.log(document.querySelector('#current').parentNode.parentNode);
 
-// btn.onclick = function() {
-//     alert('dgjndj');
-// };
+// console.log(document.querySelector('[data-current="3"]').nextElementSibling);
 
-let i = 0;
-const deleteElement = (e) => {
-    console.log(e.target);
-    console.log(e.type);
-    // i++;
-    // if (i == 1) {
-    //     btn.removeEventListener('click', deleteElement);
-    // }
-};
-
-btn.addEventListener('click', deleteElement);
-overlay.addEventListener('click', deleteElement);
-
-const link = document.querySelector('a');
-link.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log(e.target);
-});
+for ( let node of document.body.childNodes) {
+    if (node.nodeName == '#text') {
+        continue;
+    }
+    
+    console.log(node);
+}
