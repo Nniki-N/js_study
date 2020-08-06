@@ -1,7 +1,9 @@
-.black{
-    border: 20px solid black;
-    height: 200px;
-    width: 200px;
-    background: #000;
-    color: white;
+button{
+    height: 40px;
+    width: 100px;
+    background: yellow;
+    border: 0;
+}
+.blue{
+    background: blue;
 }
